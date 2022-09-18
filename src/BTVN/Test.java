@@ -9,7 +9,6 @@ public class Test {
         System.out.println("Danh sách số học sinh");
         dSach = Integer.parseInt(sc.nextLine());
        Quanly.dSach();
-       Quanly.show_1();
        Quanly.show_2();
     }
 }

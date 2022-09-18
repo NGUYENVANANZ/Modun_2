@@ -30,7 +30,7 @@ public class Quanly {
 
     public static void show_1(){
         for (HSHocSinh hocSinh : hocSinhs) {
-            if (hocSinh.getAge() == 20 && hocSinh.getAddress().equals("Thái Nguyên")) {
+            if (hocSinh.getAge() == 20 && hocSinh.getAddress().equals("Thai Nguyen")) {
                 System.out.println(hocSinh.toString());
             }
         }

@@ -1,6 +1,6 @@
-package BTVN;
+package BTVN.Ve_nha;
 
-public class HSHocSinh extends Nguoi{
+public class HSHocSinh extends Nguoi {
     private String lop;
     private String khoaHoc;
     private int kyHoc;

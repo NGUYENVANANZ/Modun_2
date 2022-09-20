@@ -1,4 +1,4 @@
-package BTVN;
+package BTVN.Ve_nha;
 
 public class Nguoi {
     private String name;

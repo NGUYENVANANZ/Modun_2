@@ -62,14 +62,12 @@ public class Test_4 {
 
     public void remove(int index) {
         Node temp = head;
-        Node hoder ;
-        for (int i = 0; i < index && temp.next != null; i++) {
-            hoder = temp.next;
-            temp.next = hoder.next;
-
+        Node holder;
+        for (int i = 0; i < index-1 && temp.next != null; i++) {
+            temp = temp.next;
         }
-
-
+        holder = temp.next;
+        temp.next = holder.next;
 
         numNode--;
     }

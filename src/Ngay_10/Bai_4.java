@@ -7,8 +7,7 @@ public class Bai_4 {
         list.add(2, "kk");
         list.add(3, "22");
         list.addLast("an");
-        list.remove(2);
-        System.out.println(list.size());
+        list.remove(3);
         for (int i = 0; i < list.size(); i++) {
             list.get(i);
         }

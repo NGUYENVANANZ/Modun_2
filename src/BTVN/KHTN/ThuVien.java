@@ -23,20 +23,60 @@ public class ThuVien {
         System.out.println("Năm Mượn");
         int nam_Muon = Integer.parseInt(sc.nextLine());
         System.out.println("Thời Gian Mượn");
-        int han_tra = Integer.parseInt(sc.nextLine());
+        int han_tra;
+        do {
+
+            han_tra = Integer.parseInt(sc.nextLine());
+            if (han_tra > 15) {
+                System.out.println("Chỉ được mượn không quá 15 ngày");
+            }
+        } while (han_tra > 15);
+
         System.out.println("Mã Sách");
         String Ma_Sach = sc.nextLine();
         TheMuon theMuon = new TheMuon(name, mSV, nam_Sinh, so_Phieu_Muon, ngay_Muon, thang_Muon, nam_Muon, han_tra, Ma_Sach);
         sinhViens.add(theMuon);
     }
 
-    public void push_And_Show() {
+    public void TimSinhVien() {
         System.out.println("Nhập Mã Sinh Viên Muốn Tìm");
         String mSV = sc.nextLine();
         for (TheMuon sinhVien : sinhViens)
             if (sinhVien.getmSV().equals(mSV)) {
                 System.out.println(sinhVien.toString());
             }
+    }
+
+    public int ngay_Tra(int ngay, int thang, int x) {
+        int ngay_x = ngay + x;
+        if (thang == 2) {
+            if (ngay_x >= 28) {
+                thang++;
+                ngay = ngay_x - ngay;
+            } else {
+                ngay = ngay_x;
+            }
+        }
+        if (thang == 4 || thang == 6 || thang == 9 || thang == 11) {
+            if (ngay == 30) {
+                ngay = ngay_x - ngay;
+            } else {
+                ngay = ngay_x;
+            }
+        }
+        if (thang == 1 || thang == 3 || thang == 5 || thang == 7 || thang == 8 || thang == 10 || thang == 12) {
+            if (thang == 12 && ngay == 31) {
+                ngay = 1;
+            } else {
+                if (ngay == 31) {
+                    ngay = ngay_x - ngay;
+                } else {
+                    ngay = ngay_x;
+                }
+            }
+
+        }
+        return ngay;
     }
 
     public String ngay_Tra_Sach(int ngay, int thang, int nam, int x) {
@@ -72,16 +112,28 @@ public class ThuVien {
             }
 
         }
-
-
         return ngay + "-" + thang + "-" + nam;
     }
 
-    public void show_xy() {
+    public void SinhVienCanTraSachCuoiThang() {
         String str;
         for (TheMuon sinhVien : sinhViens) {
-            str = sinhVien.toString() + " Mượn sách" + sinhVien.getMa_SAch() + "  " + ngay_Tra_Sach(sinhVien.getNgay_Muon(), sinhVien.getThang_Muon(), sinhVien.getNam_Muon(), sinhVien.getSoNgayDuocMuon());
-            System.out.println(str);
+            int ngayTra = ngay_Tra(sinhVien.getNgay_Muon(), sinhVien.getThang_Muon(), sinhVien.getSoNgayDuocMuon());
+            if (ngayTra >= 25) {
+                str = sinhVien.toString() + " Mượn sách" + sinhVien.getMa_SAch() + "  " + ngay_Tra_Sach(sinhVien.getNgay_Muon(), sinhVien.getThang_Muon(), sinhVien.getNam_Muon(), sinhVien.getSoNgayDuocMuon());
+                System.out.println(str);
+            }
+        }
+    }
+
+    public void SachCanTraCuoiThang() {
+        String str;
+        for (TheMuon sinhVien : sinhViens) {
+            int ngayTra = ngay_Tra(sinhVien.getNgay_Muon(), sinhVien.getThang_Muon(), sinhVien.getSoNgayDuocMuon());
+            if (ngayTra >= 25) {
+                str = sinhVien.getMa_SAch() + "  " + ngay_Tra_Sach(sinhVien.getNgay_Muon(), sinhVien.getThang_Muon(), sinhVien.getNam_Muon(), sinhVien.getSoNgayDuocMuon());
+                System.out.println(str);
+            }
         }
     }
 

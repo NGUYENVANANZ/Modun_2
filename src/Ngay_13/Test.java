@@ -1,6 +1,8 @@
+package Ngay_13;
+
 import java.util.ArrayList;
 
-public class Ngay_12 {
+public class Test {
     public static void main(String[] args) {
         ArrayList<Integer> number = new ArrayList<>();
         number.add(8);

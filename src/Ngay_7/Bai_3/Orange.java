@@ -1,0 +1,8 @@
+package Ngay_7.Bai_3;
+
+public class Orange extends Fruit {
+    @Override
+    public String howToEat() {
+        return "Orange could be juiced";
+    }
+}

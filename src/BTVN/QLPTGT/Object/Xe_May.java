@@ -24,8 +24,10 @@ public class Xe_May extends Giao_Thong {
     public void setCong_Xuat(int cong_Xuat) {
         this.cong_Xuat = cong_Xuat;
     }
-    public void Nhap(){
-        Scanner sc =new Scanner(System.in);
+
+    @Override
+    public void Nhap() {
+        Scanner sc = new Scanner(System.in);
         super.Nhap();
         System.out.println("Số Công Xuất");
         this.cong_Xuat = Integer.parseInt(sc.nextLine());
@@ -34,8 +36,8 @@ public class Xe_May extends Giao_Thong {
 
     @Override
     public String toString() {
-        return  super.toString()+
-                "Xe Máy "+
-                " Công Suất" + cong_Xuat ;
+        return super.toString() +
+                "Xe Máy " +
+                " Công Suất" + cong_Xuat;
     }
 }

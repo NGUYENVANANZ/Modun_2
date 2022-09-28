@@ -2,7 +2,7 @@ package BTVN.QLPTGT.Object;
 
 import java.util.Scanner;
 
-public class Giao_Thong{
+public abstract class Giao_Thong implements Nhap_Xuat {
     private int iD;
     private String hang_San_Xuat;
     private int nam_San_Xuat;
@@ -61,8 +61,8 @@ public class Giao_Thong{
         this.mau_Xe = mau_Xe;
     }
 
-
-    public void Nhap(){
+    @Override
+    public void Nhap() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Nhập ID");
         this.iD = Integer.parseInt(sc.nextLine());
@@ -83,7 +83,7 @@ public class Giao_Thong{
                 ", Hãng Sản Xuất:" + hang_San_Xuat +
                 ", Năm Sản Xuất " + nam_San_Xuat +
                 ", Giá Bán " + gia_Ban +
-                ", Màu Xe " + mau_Xe ;
+                ", Màu Xe " + mau_Xe;
     }
 
 }

@@ -9,6 +9,17 @@ public class Oto extends Giao_Thong {
     public Oto() {
     }
 
+    @Override
+    public void Nhap() {
+        Scanner sc = new Scanner(System.in);
+        super.Nhap();
+        System.out.println("Số Chỗ Ngồi");
+        this.so_Cho_Ngoi = Integer.parseInt(sc.nextLine());
+        System.out.println("Kiểu Động Cơ");
+        this.kieu_Dong_Co = sc.nextLine();
+
+    }
+
     public Oto(int so_Cho_Ngoi, String kieu_Dong_Co) {
         this.so_Cho_Ngoi = so_Cho_Ngoi;
         this.kieu_Dong_Co = kieu_Dong_Co;
@@ -36,20 +47,12 @@ public class Oto extends Giao_Thong {
         this.kieu_Dong_Co = kieu_Dong_Co;
     }
 
-    public void Nhap(){
-        Scanner sc =new Scanner(System.in);
-        super.Nhap();
-        System.out.println("Số Chỗ Ngồi");
-        this.so_Cho_Ngoi = Integer.parseInt(sc.nextLine());
-        System.out.println("Kiểu Động Cơ");
-        this.kieu_Dong_Co = sc.nextLine();
-    }
 
     @Override
     public String toString() {
-        return super.toString()+
-                "Oto"+
+        return super.toString() +
+                "Oto" +
                 " Số Chỗ Ngồi" + so_Cho_Ngoi +
-                ",Kiểu Động Cơ" + kieu_Dong_Co ;
+                ",Kiểu Động Cơ" + kieu_Dong_Co;
     }
 }

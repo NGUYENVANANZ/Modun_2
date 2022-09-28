@@ -27,8 +27,8 @@ public class Xe_Tai extends Giao_Thong {
 
 
     @Override
-    public void Nhap(){
-        Scanner sc =new Scanner(System.in);
+    public void Nhap() {
+        Scanner sc = new Scanner(System.in);
         super.Nhap();
         System.out.println("Số Chỗ Ngồi");
         this.trong_Tai = Integer.parseInt(sc.nextLine());
@@ -37,7 +37,7 @@ public class Xe_Tai extends Giao_Thong {
     @Override
     public String toString() {
         return super.toString() +
-                "Xe Tải "+
-                " Trọng Tải" + trong_Tai ;
+                "Xe Tải " +
+                " Trọng Tải" + trong_Tai;
     }
 }

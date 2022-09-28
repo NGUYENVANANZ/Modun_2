@@ -2,7 +2,7 @@ package BTVN.QLPTGT.Object;
 
 import java.util.Scanner;
 
-public class Giao_Thong {
+public class Giao_Thong{
     private int iD;
     private String hang_San_Xuat;
     private int nam_San_Xuat;
@@ -85,4 +85,5 @@ public class Giao_Thong {
                 ", Giá Bán " + gia_Ban +
                 ", Màu Xe " + mau_Xe ;
     }
+
 }

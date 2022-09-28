@@ -134,7 +134,7 @@ public class QLPTGT {
             System.out.println("4. Tìm Phương Tiện");
             System.out.println("5. Sắp Xếp");
             System.out.println("6. Hiện Thị");
-            System.out.println(". Thoát");
+            System.out.println("7. Thoát");
             System.out.println("----------------------------");
 
             int choice = Integer.parseInt(sc.nextLine());
@@ -145,7 +145,7 @@ public class QLPTGT {
                 case 4 -> Tim_Phuong_Tien();
                 case 5 -> Sap_Xep();
                 case 6 -> Hien_Thi();
-                default -> System.exit(0);
+                case 7 -> System.exit(0);
             }
         }
 

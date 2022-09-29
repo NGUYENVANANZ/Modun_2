@@ -5,7 +5,9 @@ import java.util.Scanner;
 
 public class Quan_ly {
     private final Scanner sc = new Scanner(System.in);
-    private  ArrayList<San_pham> san_phams = new ArrayList<>();
+    IOProduct ioProduct = new IOProduct();
+    private  ArrayList<San_pham> san_phams = ioProduct.read();
+
 
     public ArrayList<San_pham> getSan_phams() {
         return san_phams;
@@ -28,10 +30,13 @@ public class Quan_ly {
         for (San_pham s : san_phams) {
             System.out.println(s.toString());
         }
+        ioProduct.write(san_phams);
     }
     public  void add() {
         San_pham sp = taoSp();
         san_phams.add(sp);
+        show();
+
     }
 
     public void pop() {

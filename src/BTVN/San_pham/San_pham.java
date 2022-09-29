@@ -60,12 +60,6 @@ public class San_pham {
 
     @Override
     public String toString() {
-        return "San_pham{" +
-                "mS='" + mS + '\'' +
-                ", name='" + name + '\'' +
-                ", gia=" + gia +
-                ", soLuong=" + soLuong +
-                ", moTa='" + moTa + '\'' +
-                '}';
+        return  mS + "," + name + "," + gia + "," + soLuong + "," + moTa;
     }
 }
